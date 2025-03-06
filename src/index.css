@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .paragraph {
+    @apply leading-6 capitalize text-gray-700;
+  }
+
+  .heading-teritary {
+    @apply text-xl my-2 text-gray-600 uppercase font-bold tracking-tighter;
+  }
+
+  .heading-secondary {
+    @apply text-2xl my-2 text-gray-600 uppercase font-bold tracking-tighter;
+  }
+
+  .button {
+    @apply my-4 px-4 py-2 bg-green-500 font-bold text-white uppercase rounded-lg hover:shadow-lg;
+  }
+
+  .ham-open {
+    @apply gap-5 flex-col h-full w-full absolute top-0 left-0 bg-green-100 items-center justify-center translate-x-0 pointer-events-auto visible opacity-100 transition-all duration-500;
+  }
+
+  .ham-close {
+    @apply gap-5 flex-col h-full w-full absolute top-0 left-0 -translate-x-[100%] bg-green-100 items-center justify-center opacity-0 pointer-events-none invisible transition-all duration-500;
+  }
+}
+
+.dashboard-grid-col {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+@media screen and (min-width: 800px) {
+  .dashboard-ham {
+    display: hidden;
+  }
+}
